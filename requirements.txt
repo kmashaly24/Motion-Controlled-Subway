@@ -1,0 +1,15 @@
+# Verified-working combination for Python 3.12 (Windows).
+#
+# NOTE on numpy: this project is pinned to numpy 1.26.4 because the machine's
+# matplotlib / h5py / tensorflow builds are compiled against NumPy 1.x.
+# mediapipe 0.10.21 and opencv run fine against numpy 1.26.4 at runtime.
+numpy==1.26.4
+
+# 0.10.21 is the newest 0.10.x with CPython 3.12 wheels that still ships the
+# legacy `mediapipe.solutions.pose` API used by this controller.
+mediapipe==0.10.21
+
+# Pulled in automatically by mediapipe; listed explicitly for clarity.
+opencv-contrib-python==4.11.0.86
+
+pyautogui==0.9.54
